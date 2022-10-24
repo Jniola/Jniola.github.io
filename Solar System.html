@@ -1,0 +1,154 @@
+<html>
+<head>
+	<style type="text/css">
+		body {background-color: black;
+			font-family: sans-serif;
+			}
+		h1{ font-family: monospace;
+			color: yellow;
+			font-size: 50;
+			text-align: center;
+			padding-top: 40;
+		}
+		h2{ font-family: monospace;
+			color: white;
+			font-size: 30;
+			text-align: center;
+			padding-top: 10;
+		}
+		button{
+			background-color: grey;
+			color: gold;
+			font-size: 45;
+			margin-left: 50;
+		}
+
+	</style>
+</head>
+<script>
+	alert("Want to learn more about planets click OK");
+	function earth() {
+ 		button= document.getElementById('button1');
+ 		buttonVal = button.value;
+ 		 
+ 		if (buttonVal == 1){
+ 			document.body.style.backgroundColor = "green";
+ 			document.getElementById("button1").innerHTML = "Earth is not flat, but it's not perfectly round either.The days are getting longer.There weren't always several continents. Earth's icy times. ...";}
+
+ 		else if (buttonVal ==2){
+ 			document.body.style.backgroundColor = "green";}
+ 		}
+      function Mars() {
+ 		button= document.getElementById('button2');
+ 		buttonVal = button.value;
+ 		 
+ 		if (buttonVal == 1){
+ 			document.body.style.backgroundColor = "red";
+ 			document.getElementById("button2").innerHTML = "Named after the Roman God of war, Mars is the fourth planet from the sun in our solar system. Mars is also known as the 'Red Planet' because, well, it's red! Mars is the second smallest planet in the solar system after Mercury.";}
+
+ 		else if (buttonVal ==2){
+ 			document.body.style.backgroundColor = "green";}
+ 		}
+      function jupiter() {
+ 		button= document.getElementById('button3');
+ 		buttonVal = button.value;
+ 		 
+ 		if (buttonVal == 1){
+ 			document.body.style.backgroundColor = "orange";
+ 			document.getElementById("button3").innerHTML = "Jupiter Is Massive:Jupiter Cannot Become A Star, Jupiter Is The Fastest Spinning Planet In The Solar System: The Clouds On Jupiter Are Only 50 km Thick: ...";}
+
+ 		else if (buttonVal ==2){
+ 			document.body.style.backgroundColor = "green";}
+ 		}
+ 		function saturn() {
+ 		button= document.getElementById('button4');
+ 		buttonVal = button.value;
+ 		 
+ 		if (buttonVal == 1){
+ 			document.body.style.backgroundColor = "yellow";
+ 			document.getElementById("button4").innerHTML = "Saturn is huge. ... You cannot stand on Saturn. ... Its beautiful rings are not solid. ... Some of these bits are as small as grains of sand. ... The rings are huge but thin. ...";}
+
+ 		else if (buttonVal ==2){
+ 			document.body.style.backgroundColor = "green";}
+ 		}
+ 		function Uranus() {
+ 		button= document.getElementById('button5');
+ 		buttonVal = button.value;
+ 		 
+ 		if (buttonVal == 1){
+ 			document.body.style.backgroundColor = "lightblue";
+ 			document.getElementById("button5").innerHTML = "Uranus is the coldest planet in the Solar System:Uranus orbits the Sun on its side: ... A Season on Uranus lasts one long day – 42 years: ...Uranus is the second-least dense planet: ...";}
+
+ 		else if (buttonVal ==2){
+ 			document.body.style.backgroundColor = "green";}
+ 		}
+ 		function Neptune() {
+ 		button= document.getElementById('button6');
+ 		buttonVal = button.value;
+ 		 
+ 		if (buttonVal == 1){
+ 			document.body.style.backgroundColor = "darkblue";
+ 			document.getElementById("button6").innerHTML = "More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.";}
+
+ 		else if (buttonVal ==2){
+ 			document.body.style.backgroundColor = "green";}
+ 		}
+ 	
+ 	var array = ["Thank", "You,", "See", "You", "Soon..."];
+	Planets = '';
+	for (i=0; i<5; i++){
+		console.log(array[i]);
+		Planets += array[i] + "<br>";
+
+		document.getElementById("Planets").innerHTML = Planets;
+	}
+</script>
+
+
+
+<body>
+ <h1>Our Solar System...</h1>
+ 	
+ <h2>Click on each planet to quiz your knowledge</h2>
+ <div> 
+ 	
+ 	<button onclick="earth()" value= 1 id="button1"> Earth </button>
+ 	<br> <br> <br>
+ </div>	
+ <div>
+ 	<button onclick="Mars()" value= 1 id="button2"> Mars </button>
+ 		<br> <br> <br>
+ </div>
+ <div>
+ 	<button onclick="jupiter()" value= 1 id="button3"> Jupiter </button>
+ 	<br> <br> <br>
+ </div>
+ <div>
+ 	<button onclick="saturn()" value= 1 id="button4"> Saturn </button>
+ 	<br> <br> <br>
+ </div>
+ <div>
+ 	<button onclick="Uranus()" value= 1 id="button5"> Uranus </button>
+ 	<br> <br> <br>
+ </div>
+ <div>
+ 	<button onclick="Neptune()" value= 1 id="button6"> Neptune </button>
+ 	<br> <br> <br>
+ </div>
+
+
+<div id="Planets"> </div>
+
+ </div>
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

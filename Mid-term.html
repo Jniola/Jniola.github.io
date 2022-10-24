@@ -1,0 +1,164 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style>
+	body {
+		background-color: darkslategrey;
+		font-family: sans-serif;
+				}
+	h1 {
+		font-family: cursive;
+		font-size: 105;
+		color:  #3d5a80;
+		text-align: center;
+		padding-top: 50;
+		padding-left: 200;
+		stroke-linecap: round;
+
+		}
+	p.t1 {
+		text-align: center;
+		padding: 30;
+		color: whitesmoke;
+		font-size: 75;
+	}
+	h2 {
+		text-align: center;
+		padding: 30;
+		color: whitesmoke;
+		font-size: 40;
+	}
+	button {
+		color:  #3d5a80;
+  		border: 3px dotted; #3d5a80;
+  		padding: 10px 10px;
+
+  		font-size: 25;
+	}
+	div {
+		font-size: 35;
+		color: yellow;
+		text-align: center;
+	}
+	audio {
+		color: orange;
+		padding-top: 50;
+		padding-left: 100;
+	}
+	h3{
+		font-size: 50;
+		color: white;
+	}
+
+	p.bio {
+		text-align: center;
+		padding: 30;
+		color: white;
+		font-size: 25;}
+
+
+
+
+
+
+.container {
+  position: relative;
+  width: 50%;
+  
+}
+
+.image {
+  display: block;
+  width: 350;
+  height: 400;
+  align-content: center;
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 400;
+  width: 350;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  align-content: center;
+  
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  
+}
+
+.text {
+  color: white;
+  font-size: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
+
+</style>
+
+</head>
+<body>
+	<h1>Loba's <img src="image.bmp" alt= "Loba's Choreography" width= "800" hight= "800" > Tunes</h1>
+	<p class= "t1">Triva of the week</p>
+	<h2> We sent out a poll to all of our followers and asked which out of all the listed artist are their favorite and this is what they answered...
+	</h2>
+<div id="Planets"> </div>
+
+
+<h3>This is what our follwers voted</h3>
+
+
+<audio controls src="The.mp3"> </audio>
+
+<div class="container">
+  <img src="TWeekend.jpeg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Winner</div>
+  </div>
+</div>
+
+
+<p class="bio">Abel Makkonen Tesfaye (/ɑːbɛltɛsfeɪ/ AH-bell-tes-FAY; born February 16, 1990), known professionally as the Weeknd, is a Canadian singer, songwriter, and record producer.[2] Known for his sonic versatility and dark lyricism, his music explores escapism, romance, and melancholia, and is often inspired by personal experiences.[3] He has received numerous accolades, including four Grammy Awards, 20 Billboard Music Awards, 17 Juno Awards, six American Music Awards, two MTV Video Music Awards, and nominations for an Academy Award, a Latin Grammy Award, and a Primetime Emmy Award.
+
+Born and raised in Toronto, Tesfaye began his career in 2009 by anonymously releasing music on YouTube. Two years later, he co-founded the XO record label and released the mixtapes House of Balloons, Thursday and Echoes of Silence, which gained recognition for his style of contemporary and alternative R&B and the mystique surrounding his identity.[4] In 2012, he signed with Republic Records and rereleased the mixtapes in the compilation album Trilogy. He explored dark wave in his debut studio album Kiss Land (2013), which debuted at number two on the US Billboard 200. After its release, Tesfaye began contributing to film soundtracks, with his acclaimed single "Earned It" from Fifty Shades of Grey (2015) winning the Grammy Award for Best R&B Performance, while also being nominated for the Academy Award for Best Original Song.[5]
+
+</p>
+
+
+
+ 
+
+</body>
+<script>
+	alert('Are you ready for this?')
+	
+	
+	var array = ["A: Shakiera  ", "B: Bruno Mars  ", "C: Bad Bunny  ", "D: The Weekend  ", "E: Ed Sheran"];
+	Planets = '';
+	for (i=0; i<6; i++){
+		console.log(array[i]);
+		Planets += array[i] + "<br>";
+		document.getElementById("Planets").innerHTML = array;
+	}
+	
+</script>
+
+
+
+</html>

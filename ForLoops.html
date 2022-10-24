@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title> Color of Planets</title>
+
+	<style type="text/css">
+	background-color: black;
+	h1 {color: yellow;}
+	button {color: grey;}
+
+
+	</style>
+</head>
+
+
+<body> 
+	<h1>Our Solar System</h1>
+	
+
+
+<div id="Planets"> </div>
+
+
+
+</body>
+
+
+
+<script>
+	var array = ["Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
+	Planets = '';
+	for (i=0; i<6; i++){
+		console.log(array[i]);
+		Planets += array[i] + "<br>";
+		document.getElementById("Planets").innerHTML= Planets;
+	}
+	
+
+	/*while(x < array.length){
+		console.log(array[i]);
+		x++;
+	}*/
+
+</script>
+
+
+ </html>
