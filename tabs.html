@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lobas choreo</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<style>
+	.container{
+		width: 800px;
+		margin: 100px auto;
+	}
+	.ui-widget-header{
+		background: none;
+		border: none;
+	}
+	#tabs{
+		border: none;
+	}
+	.ui-tabs .ui-tabs-panel{
+		border: 1px solid hotpink;
+		border-radius: 30px;
+		padding: 5% 10%;
+
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+		background: pink;
+		border: none;
+	}
+	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+		background: red;
+	}
+
+
+
+#snow {
+		position: fixed;
+		top: -160px;
+		left: 0;
+		right: 0;
+}
+#snow i {
+-webkit-animation: falling 20s 1s linear;
+animation: falling 8s linear 2s 20;
+animation-iteration-count :infinite;
+
+-webkit-animation-iteration-count :infinite;
+border-radius: 50%;
+cursor: default;
+display: inline-block;
+font-style: normal;
+height: 16px;
+user-select: none;
+-webkit-user-select: none;
+width: 16px;
+color: white;
+}
+/* animation */
+@-webkit-keyframes falling {
+0% {-webkit-transform: translate3d(0,0,0) rotate(0deg);}
+100% {-webkit-transform: translate3d(30px,1000px,0) rotate(360deg);}
+}
+@keyframes falling {
+0% {transform: translate3d(0,0,0) rotate(0deg);}
+100% {transform: translate(30px,1000px) rotate(360deg);}
+}
+
+/* Sizes */
+#snow i:nth-of-type(4n) {
+height:30px;
+width:30px;
+}
+
+#snow i:nth-of-type(4n+1) {
+height:24px;
+width:24px;
+}
+
+#snow i:nth-of-type(4n+2){
+height:10px;
+width:10px;
+}
+
+/* Speeds */
+#snow i:nth-of-type(4n) {
+-webkit-animation-duration: 16.3s;
+-moz-animation-duration: 16.3s;
+}
+#snow i:nth-of-type(4n+1){
+-webkit-animation-duration: 16.1s;
+-moz-animation-duration: 16.1s;
+}
+#snow i:nth-of-type(4n+2) {
+-webkit-animation-duration: 12.7s;
+-moz-animation-duration: 12.7s;
+}
+
+/* Delays */
+#snow i:nth-of-type(3n) {
+-webkit-animation-delay: 2.3s;
+animation-delay: 2.3s;
+}
+#snow i:nth-of-type(3n+1) {
+-webkit-animation-delay: 1.2s;
+animation-delay: 1.2s;
+}
+
+#snow i:nth-of-type(3n+2) {
+-webkit-animation-delay: 3.4s;
+animation-delay: 3.4s;
+}
+
+/* Timing functions */
+#snow i:nth-of-type(5n) {
+-webkit-animation-timing-function:ease-in-out;
+animation-timing-function:ease-in-out;
+}
+
+#snow i:nth-of-type(5n+1) {
+-webkit-animation-timing-function:ease-out;
+animation-timing-function:ease-out;
+}
+
+#snow i:nth-of-type(5n+2) {
+-webkit-animation-timing-function:ease;
+animation-timing-function:ease;
+}
+
+#snow i:nth-of-type(5n+3) {
+-webkit-animation-timing-function:ease-in;
+animation-timing-function:ease-in;
+}
+
+#snow i:nth-of-type(5n+4) {
+-webkit-animation-timing-function:linear;
+animation-timing-function:linear;
+}
+#snow i:nth-of-type(11n){
+-webkit-animation-timing-function:cubic-bezier(0.2, 0.3, 0.8, 0.9);
+animation-timing-function:cubic-bezier(0.2, 0.3, 0.8, 0.9);
+}
+
+/* Opacity */
+#snow i:nth-of-type(7n){
+opacity: 0.5;
+}
+
+#snow i:nth-of-type(7n+2) {
+opacity: 0.3;
+}
+
+#snow i:nth-of-type(7n+4) {
+opacity: 0.7;
+}
+
+#snow i:nth-of-type(7n+6){
+opacity: 0.6;
+-webkit-animation-timing-function:ease-in;
+animation-timing-function:ease-in;
+}
+
+#snow i:nth-of-type(7n+1){
+opacity: 0.8;
+}
+
+</style>
+
+
+</head>
+
+<script>
+		window.onload = function() {
+  var flakes = [];
+  var types = ['❄','❅','❆'];
+  for(var i = 0, len = 240; i < len; i++) {
+    flakes.push('<i>' + types[i%3]  + '</i>');
+  }  document.getElementById('snow').innerHTML = flakes.join('');
+};
+</script>
+
+
+<body>
+<div class="container">
+	<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Tab 1</a></li>
+					<li><a href="#tabs-2">Tab 12</a></li>
+				</ul>
+		<div id="tabs-1">
+				<div class="row">
+    				<div class="col-4" style="padding-left: 60; margin-left: 30;">
+
+    					<p> This love story began in 2017 John Bowne High School, NY. The couple saw each other in the hall away while running late to their class. They started talking and fell in love, the couple still argue of who made the first move. He proposed on March 2021 and the wedding was on August 2021, yes only 5 months to prepare for the wedding (they were crazy in love). We practiced twice a week; the bridal shower was a fun group to work with. It was everyone first time dancing, they were all nervous but with rehearsals and some confidence exercises,
+    					THEY DID IT!  
+        				</p>
+    				</div>
+    				<div class= "col-8">
+    					<div id="carouselExampleDark" class="carousel carousel-secondary slide" data-bs-ride="carousel">
+  						<div class="carousel-indicators">
+    						<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+   					 		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+   					 		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  						</div>
+
+ 						<div class="carousel-inner">
+    						<div class="carousel-item active" data-bs-interval="10000">
+      							<img src="villa1.jpg" class="d-block w-100" alt="...">
+    						</div>
+    					<div class="carousel-item" data-bs-interval="2000">
+     				 		<img src="villa2.jpg" class="d-block w-100 h-100" alt="...">
+    					</div>
+
+    					<div class="carousel-item">
+      						<img src="villa3.jpg" class="d-block w-100 h-100" alt="...">
+    					</div>
+ 		 				</div>
+  							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    							<span class="visually-hidden">Previous</span>
+  							</button>
+  							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+   				 				<span class="visually-hidden">Next</span>
+ 	 						</button>
+						</div>
+    				</div>
+    			</div>
+  		</div>
+
+	</div>
+		
+
+	<div id="tabs-2">
+				<div id="snow"></div>
+    				<div class="row">
+    					<div class="col-8">
+							<p> This love story began in 2017 John Bowne High School, NY. The couple saw each other in the hall away while running late to their class. They started talking and fell in love, the couple still argue of who made the first move. He proposed on March 2021 and the wedding was on August 2021, yes only 5 months to prepare for the wedding (they were crazy in love). We practiced twice a week; the bridal shower was a fun group to work with. It was everyone first time dancing, they were all nervous but with rehearsals and some confidence exercises, <br> THEY DID IT!  
+        					</p>
+    					</div>
+    					<div class= "col-4">
+    					kkkkkkkkkkkk
+    		
+    					</div>
+    				</div>
+	</div>
+</div>
+
+<script>
+	$(function() {
+		$("#tabs").tabs();
+	});
+
+	const carousel = new bootstrap.Carousel('#myCarousel')
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+</body>
+</html>
